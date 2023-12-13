@@ -21,7 +21,7 @@
     z-index:100; 
     top: 0;
     left: 0;
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 0;
     box-shadow:5px 5px 20px #303030;
     background-color: #151414;
 
@@ -95,6 +95,12 @@ section{
 /*Products*/
 #product{
     background:gray;
+
+ }
+.card p{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
 }
 #product  .card{
     border: none;
@@ -105,13 +111,27 @@ section{
     margin: 10px;
 }
 .card .card-img-top{
-    height: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+.card-body{
+    display: flex;
+    margin-left: 10px;
 }
 .card .card-title{
-    font-size: 35px;
+    font-size: 1.5rem;
+    margin: 8px 10px 0 0;
 }
-.card button{
-    margin-left: 50px;
+.card-body span{
+    font-size: 1.5rem;
+    color: grey;
+    text-decoration: line-through;
+    margin: 5px 10px;
+}
+.card-body h6{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 8px 0;
 }
 /* Contact styles */
 #contact {
@@ -120,11 +140,10 @@ section{
 }
 
 #contact img {
-    height: 400px;
+    max-height: 350px;
     object-fit: cover;
     width: 100%;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
 }
 
 #contact form {
@@ -136,16 +155,17 @@ section{
 #contact form h1 {
     font-size: 28px;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 #contact form textarea {
     resize: none; 
     height: 120px;
 }
 
-#contact form input:focus,
-#contact form textarea:focus {
-    border-color:5px #2baa2b;
+ .form-group input:focus,
+.form-group textarea:focus{
+   border:1px solid #2baa2b;
+   outline: none;
 }
 #contact form button {
     width: 150px;
